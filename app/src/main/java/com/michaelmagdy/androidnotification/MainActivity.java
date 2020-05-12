@@ -27,7 +27,7 @@ import com.google.firebase.iid.InstanceIdResult;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String CHANNEL_ID = "michael_magdy";
+    public static final String CHANNEL_ID = "michael_magdy";
     private static final String CHANNEL_NAME = "Michael Magdy";
     private static final String CHANNEL_DESC = "Michael Magdy Notification Project";
 
@@ -143,19 +143,5 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void displayNotification(){
 
-        //notification builder
-        NotificationCompat.Builder mBuilder =
-                new NotificationCompat.Builder(this, CHANNEL_ID)
-                .setSmallIcon(R.drawable.ic_notifications_active_red_a700_24dp)
-                .setContentTitle("Hey, You got a new Notification")
-                .setContentText("This is a Notification you received. Thanks for  using our app")
-                .setPriority(NotificationCompat.PRIORITY_DEFAULT);
-
-        //notification manager
-        NotificationManagerCompat mNotificationMgr = NotificationManagerCompat.from(this);
-        mNotificationMgr.notify(1, mBuilder.build());
-
-    }
 }
